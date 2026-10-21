@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>叶广生 · 自我介绍</title>
+<meta name="description" content="8 年前端，腾讯文档 2 亿 MAU PDF 项目的批注与 AI 负责人。">
+<style>
+  :root{
+    --bg:#fbfbfd;
+    --surface:#ffffff;
+    --ink:#1d1d1f;
+    --ink-2:#58585d;
+    --ink-3:#8a8a8f;
+    --line:rgba(0,0,0,.10);
+    --line-soft:rgba(0,0,0,.07);
+    --accent:#0071e3;
+    --accent-soft:rgba(0,113,227,.09);
+    --nav-bg:rgba(251,251,253,.72);
+    --tint-a:.10;
+    --shadow:0 20px 44px -28px rgba(0,0,0,.30);
+    --ease:cubic-bezier(.22,.61,.36,1);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#000000;
+      --surface:#161617;
+      --ink:#f5f5f7;
+      --ink-2:#a1a1a6;
+      --ink-3:#86868b;
+      --line:rgba(255,255,255,.14);
+      --line-soft:rgba(255,255,255,.09);
+      --accent:#2997ff;
+      --accent-soft:rgba(41,151,255,.14);
+      --nav-bg:rgba(0,0,0,.70);
+      --tint-a:.18;
+      --shadow:0 20px 44px -24px rgba(0,0,0,.9);
+    }
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);
+    font-size:16px;line-height:1.72;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    overflow-x:hidden;
+  }
+  ::selection{background:rgba(0,113,227,.18)}
+  a{color:inherit;text-decoration:none}
+  .wrap{width:100%;max-width:1040px;margin:0 auto;padding:0 28px}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    background:var(--nav-bg);
+    -webkit-backdrop-filter:saturate(180%) blur(20px);
+    backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid var(--line-soft);
+  }
+  .nav-inner{
+    max-width:1040px;margin:0 auto;padding:0 28px;height:56px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .brand{font-size:14.5px;font-weight:600;letter-spacing:.03em}
+  .nav-links{display:flex;gap:24px}
+  .nav-links a{font-size:12.8px;color:var(--ink-2);transition:color .25s var(--ease)}
+  .nav-links a:hover{color:var(--ink)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:128px 0 0;text-align:center;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;top:-280px;left:50%;
+    width:min(1100px,150vw);height:740px;transform:translateX(-50%);
+    background:radial-gradient(50% 50% at 50% 50%,rgba(0,113,227,.16),rgba(0,113,227,0) 70%);
+    pointer-events:none;
+  }
+  @media (prefers-color-scheme: dark){
+    .hero::before{background:radial-gradient(50% 50% at 50% 50%,rgba(41,151,255,.26),rgba(41,151,255,0) 70%)}
+  }
+  .hero > .wrap{position:relative}
+  .eyebrow{
+    font-size:12px;font-weight:500;letter-spacing:.28em;color:var(--ink-3);
+    padding-left:.28em;
+  }
+  .hero h1{
+    margin:22px auto 0;max-width:15em;
+    font-size:clamp(38px,6.3vw,76px);line-height:1.1;font-weight:600;
+    letter-spacing:-.012em;text-wrap:balance;
+  }
+  .grad{
+    background:linear-gradient(100deg,#0071e3,#4b6cff 52%,#8a5cf5);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  @media (prefers-color-scheme: dark){
+    .grad{background:linear-gradient(100deg,#2997ff,#6f8cff 52%,#a97bff);-webkit-background-clip:text;background-clip:text}
+  }
+  .lead{
+    margin:28px auto 0;max-width:620px;
+    font-size:clamp(15.5px,1.6vw,18.5px);line-height:1.68;color:var(--ink-2);
+  }
+  .lead b{color:var(--ink);font-weight:500}
+
+  .stats{
+    display:flex;justify-content:center;flex-wrap:wrap;
+    margin:66px auto 0;padding-top:34px;border-top:1px solid var(--line-soft);
+  }
+  .stats > div{padding:0 30px;border-left:1px solid var(--line-soft);text-align:center}
+  .stats > div:first-child{border-left:0;padding-left:0}
+  .stats > div:last-child{padding-right:0}
+  .stats b{display:block;font-size:clamp(26px,3.4vw,34px);font-weight:600;letter-spacing:-.03em;line-height:1.1;font-variant-numeric:tabular-nums}
+  .stats span{display:block;margin-top:7px;font-size:12.5px;color:var(--ink-3);letter-spacing:.02em}
+
+  /* ---------- section ---------- */
+  .sec{padding:104px 0 0}
+  .sec-head{max-width:740px;margin-bottom:44px}
+  .sec-head h2{
+    margin-top:16px;font-size:clamp(25px,3.3vw,36px);line-height:1.26;
+    font-weight:600;letter-spacing:-.01em;text-wrap:balance;
+  }
+
+  /* ---------- about ---------- */
+  .about p{
+    max-width:780px;color:var(--ink-2);
+    font-size:clamp(15.5px,1.5vw,17px);line-height:1.86;
+  }
+  .about p + p{margin-top:20px}
+  .about b{color:var(--ink);font-weight:600}
+
+  .caps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:60px}
+  .cap{border-top:1px solid var(--ink);padding-top:18px}
+  .cap h4{font-size:15px;font-weight:600;letter-spacing:.02em}
+  .cap p{margin-top:9px;font-size:13.6px;line-height:1.7;color:var(--ink-3)}
+
+  /* ---------- view ---------- */
+  .callout{
+    position:relative;overflow:hidden;
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:28px;padding:clamp(30px,4.6vw,56px);
+    box-shadow:var(--shadow);
+  }
+  .callout::before{
+    content:"";position:absolute;top:-160px;right:-120px;width:460px;height:460px;
+    background:radial-gradient(50% 50% at 50% 50%,rgba(138,92,245,.16),transparent 70%);
+    pointer-events:none;
+  }
+  .view-body{position:relative;max-width:720px;font-size:clamp(15.4px,1.5vw,17px);line-height:1.86;color:var(--ink-2)}
+  .view-body b{color:var(--ink);font-weight:600}
+  .view-note{
+    position:relative;margin-top:26px;padding-top:22px;border-top:1px solid var(--line-soft);
+    font-size:13.4px;color:var(--ink-3);letter-spacing:.02em;
+  }
+
+  /* ---------- tencent block ---------- */
+  .tencent{
+    position:relative;overflow:hidden;
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:24px;padding:32px 34px;box-shadow:var(--shadow);
+  }
+  .tencent::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(110% 90% at 100% 0%,rgba(0,113,227,var(--tint-a)),transparent 60%);
+    pointer-events:none;
+  }
+  .tencent > *{position:relative}
+
+  .perf{
+    display:flex;flex-wrap:wrap;align-items:baseline;
+    padding-bottom:22px;margin-bottom:24px;border-bottom:1px solid var(--line-soft);
+  }
+  .perf-label{
+    margin-right:32px;
+    font-size:11.5px;font-weight:500;letter-spacing:.24em;color:var(--ink-3);
+  }
+  .perf > div:not(.perf-label){padding-right:30px;margin-right:30px;border-right:1px solid var(--line-soft)}
+  .perf > div:last-child{padding-right:0;margin-right:0;border-right:0}
+  .perf b{display:block;font-size:24px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+  .perf span{display:block;margin-top:4px;font-size:12.5px;color:var(--ink-3)}
+
+  .tencent h3{font-size:19px;font-weight:600;letter-spacing:-.01em;line-height:1.5}
+  .tag{
+    display:inline-block;vertical-align:2px;margin-left:10px;
+    font-size:11.5px;font-weight:500;letter-spacing:.02em;
+    color:var(--accent);background:var(--accent-soft);
+    padding:2px 10px;border-radius:999px;
+  }
+  .tencent p{margin-top:10px;max-width:660px;font-size:14.4px;line-height:1.78;color:var(--ink-2)}
+
+  /* ---------- project grid ---------- */
+  .proj-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+  .proj{
+    position:relative;overflow:hidden;isolation:isolate;
+    display:flex;flex-direction:column;
+    background:var(--surface);border:1px solid var(--line);
+    border-radius:18px;padding:22px 22px 20px;
+    transition:box-shadow .45s var(--ease),border-color .45s var(--ease);
+  }
+  .proj::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:radial-gradient(120% 90% at 100% 0%,rgba(var(--tint),var(--tint-a)),transparent 62%);
+  }
+  .proj:hover{box-shadow:var(--shadow);border-color:rgba(0,0,0,.16)}
+  @media (prefers-color-scheme: dark){
+    .proj:hover{border-color:rgba(255,255,255,.22)}
+  }
+  .proj .num{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;letter-spacing:.14em;color:var(--ink-3);
+  }
+  .proj h4{margin:12px 0 8px;font-size:16.5px;font-weight:600;letter-spacing:-.008em;line-height:1.4}
+  .proj p{font-size:13.4px;line-height:1.72;color:var(--ink-2)}
+  .proj .metric{
+    margin-top:auto;padding-top:16px;
+    font-size:12.2px;font-weight:500;color:var(--accent);letter-spacing:.01em;
+  }
+
+  /* ---------- personal ---------- */
+  .sec-note{margin-top:14px;font-size:13.2px;color:var(--ink-3)}
+  .plist{border-top:1px solid var(--line-soft)}
+  .pitem{
+    position:relative;isolation:isolate;
+    display:grid;grid-template-columns:260px 1fr;gap:36px;
+    padding:30px 0;border-bottom:1px solid var(--line-soft);
+  }
+  .pitem::before{
+    content:"";position:absolute;inset:9px -16px;z-index:-1;
+    border-radius:14px;background:transparent;
+    transition:background-color .45s var(--ease);
+  }
+  .pitem:hover::before{background:rgba(0,113,227,.035)}
+  @media (prefers-color-scheme: dark){
+    .pitem:hover::before{background:rgba(41,151,255,.08)}
+  }
+  .pitem h3{
+    display:flex;align-items:baseline;gap:8px;
+    font-size:19px;font-weight:600;letter-spacing:-.01em;line-height:1.45;
+    transition:color .35s var(--ease);
+  }
+  .pitem .arrow{
+    font-size:14px;color:var(--ink-3);font-weight:500;
+    transition:transform .35s var(--ease),color .35s var(--ease);
+  }
+  .pitem:hover h3{color:var(--accent)}
+  .pitem:hover .arrow{color:var(--accent);transform:translate(3px,-3px)}
+  .pitem .repo{
+    margin-top:9px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:11px;letter-spacing:0;white-space:nowrap;color:var(--ink-3);
+  }
+  .pitem .stack{margin-top:10px;font-size:12px;line-height:1.85;letter-spacing:0;color:var(--ink-3)}
+  .pitem .pbody p{max-width:660px;font-size:14.4px;line-height:1.8;color:var(--ink-2)}
+  .pitem .pbody p + p{margin-top:10px}
+  .pitem .metric{margin-top:14px;font-size:12.6px;font-weight:500;color:var(--accent)}
+
+  /* ---------- resume ---------- */
+  .rlist{border-top:1px solid var(--line-soft)}
+  .rrow{
+    display:grid;grid-template-columns:160px 1fr 220px;gap:24px;
+    align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line-soft);
+  }
+  .rrow .period{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .rrow .role{font-size:15px}
+  .rrow .role b{font-weight:600}
+  .rrow .role span{color:var(--ink-3);font-size:13.6px;margin-left:10px}
+  .rrow .note{font-size:13.2px;color:var(--ink-3);text-align:right}
+
+  /* ---------- footer ---------- */
+  footer{margin-top:110px;border-top:1px solid var(--line-soft);padding:30px 0 64px}
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    font-size:12.5px;color:var(--ink-3);letter-spacing:.02em;
+  }
+  .foot .name{color:var(--ink-2);font-weight:500}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .proj.reveal{
+    transition:opacity .85s var(--ease),transform .85s var(--ease),
+               box-shadow .45s var(--ease),border-color .45s var(--ease);
+  }
+  .proj-list > .reveal:nth-child(4),
+  .caps > .reveal:nth-child(2){transition-delay:.09s}
+  .proj-list > .reveal:nth-child(5),
+  .caps > .reveal:nth-child(3){transition-delay:.18s}
+  .proj-list > .reveal:nth-child(6){transition-delay:.27s}
+  .proj-list > .reveal:nth-child(7){transition-delay:.36s}
+  .proj-list > .reveal:nth-child(8){transition-delay:.45s}
+  .proj-list > .reveal:nth-child(9){transition-delay:.54s}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:920px){
+    .proj-list{grid-template-columns:repeat(2,1fr)}
+    .caps{grid-template-columns:1fr;gap:28px}
+    .pitem{grid-template-columns:1fr;gap:12px}
+    .rrow{grid-template-columns:130px 1fr;gap:16px}
+    .rrow .note{grid-column:2;text-align:left;margin-top:2px}
+  }
+  @media (max-width:640px){
+    .nav-links{display:none}
+    .hero{padding-top:100px}
+    .hero::before{top:-200px;height:560px}
+    .sec{padding-top:78px}
+    .stats{display:grid;grid-template-columns:1fr 1fr;gap:28px 0;margin-top:52px}
+    .stats > div{padding:0 10px;border-left:0}
+    .stats > div:nth-child(even){border-left:1px solid var(--line-soft)}
+    .tencent{padding:24px 22px}
+    .perf-label{width:100%;margin:0 0 14px}
+    .perf > div:not(.perf-label){padding-right:18px;margin-right:18px}
+    .proj-list{grid-template-columns:1fr}
+    .rrow{grid-template-columns:1fr;gap:6px}
+    .rrow .note{grid-column:1}
+    .rrow .role span{display:block;margin-left:0;margin-top:5px}
+    .tencent h3 .tag{margin-left:0;margin-top:8px}
+    .foot{flex-direction:column;align-items:flex-start;gap:8px}
+    footer{margin-top:80px}
+  }
+  @media print{
+    .nav{display:none}
+    .hero{padding-top:24px}
+    .sec{padding-top:36px}
+    .reveal{opacity:1;transform:none}
+    .proj,.tencent,.callout{box-shadow:none}
+    body{background:#fff}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">叶广生</a>
+    <div class="nav-links">
+      <a href="#about">简介</a>
+      <a href="#view">观点</a>
+      <a href="#work">腾讯项目</a>
+      <a href="#personal">个人项目</a>
+      <a href="#experience">工作履历</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <header class="hero" id="top">
+    <div class="wrap">
+      <p class="eyebrow">叶广生 · 前端工程师</p>
+      <h1>复杂 Web 编辑器<br><span class="grad">与 AI 工程化</span></h1>
+      <p class="lead">
+        8 年前端，有全栈经验。近三年多在<b>腾讯文档</b>负责 2 亿 MAU 的 PDF 项目，
+        是批注与 AI 负责人；此前任职富途证券、OPPO。
+      </p>
+
+      <div class="stats reveal">
+        <div><b>2 亿</b><span>PDF 项目 MAU</span></div>
+        <div><b>8</b><span>年前端研发</span></div>
+        <div><b>10w+</b><span>批注模块日活</span></div>
+        <div><b>100%</b><span>Word 表格样式还原</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="sec" id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">个人简介</p>
+        <h2>技术主线是复杂 Web 编辑器</h2>
+      </div>
+
+      <div class="about">
+        <p class="reveal">
+          交互侧，我从零实现了<b>批注、图章、页面管理</b>等核心模块；并行参与 DOC 排版引擎，
+          逆向对齐 Office Word 表格的未公开渲染规则，做到像素级还原。
+          在 PDF 项目里，我是批注与 AI 负责人，带日活 10w+ 的批注模块与 AI 体系。
+        </p>
+        <p class="reveal">
+          AI 方向上，我负责原文朗读等功能的业务落地，并搭建 <b>AI harness 与三层 LLM Wiki
+          知识库</b>，把团队的迁移经验变成 Agent 可消费的工程资产。
+        </p>
+      </div>
+
+      <div class="caps reveal">
+        <div class="cap reveal">
+          <h4>交互内核</h4>
+          <p>批注、选区、页面管理；跨端统一的状态模型与手势语义。</p>
+        </div>
+        <div class="cap reveal">
+          <h4>渲染引擎</h4>
+          <p>DOC 表格排版；OOXML 逆向与像素级样式对齐。</p>
+        </div>
+        <div class="cap reveal">
+          <h4>AI 工程化</h4>
+          <p>流式 TTS、迁移 harness 与确定性门禁、知识库沉淀。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= VIEW ================= -->
+  <section class="sec" id="view">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">我的判断</p>
+        <h2>会让 AI 不稀缺，<br>让 token 产生复利才稀缺</h2>
+      </div>
+
+      <div class="callout reveal">
+        <p class="view-body">
+          把团队使用 token 的经验与错误沉淀到项目里，作为 <b>context 与 code graph</b>，
+          让 AI 的产出可控、可验证、可沉淀。这也是我想在贵团队继续深入的方向。
+        </p>
+        <p class="view-note">不要求系统天然可靠，而是在外部建立确定性边界与反馈闭环。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TENCENT ================= -->
+  <section class="sec" id="work">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">腾讯文档 · 2 亿 MAU 的 PDF 项目</p>
+        <h2>九个项目，一条主线</h2>
+      </div>
+
+      <article class="tencent reveal">
+        <div class="perf">
+          <p class="perf-label">绩效</p>
+          <div><b>1</b><span>次五星绩效</span></div>
+          <div><b>1</b><span>次晋升</span></div>
+          <div><b>3 星+</b><span>其余考评</span></div>
+        </div>
+        <h3>批注与 AI 负责人<span class="tag">腾讯文档 · PDF / DOC 编辑器</span></h3>
+        <p>
+          负责 2 亿 MAU 的腾讯文档 PDF 项目，主管批注协作与 AI 功能两条方向；
+          技术主线是复杂 Web 编辑器，从交互内核一路做到 AI 工程化。
+        </p>
+      </article>
+
+      <div class="proj-list">
+        <article class="proj reveal" style="--tint:0,113,227">
+          <span class="num">01 / 批注</span>
+          <h4>批注协作体系</h4>
+          <p>从 0 实现批注、图章与批注形态互转，覆盖创建、编辑、退出与权限申请全链路；以单一真源统一六类批注的临时资源清理。</p>
+          <p class="metric">日活 10w+ · 批注负责人</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:0,140,220">
+          <span class="num">02 / 页面</span>
+          <h4>页面管理与跨端拖拽</h4>
+          <p>页面增删、旋转、多选拖拽与稳定排序：稳定 rank 承载身份，落点先换算再插入，PC 与移动端只拆 Sensor，算法共享纯函数。</p>
+          <p class="metric">身份与坐标解耦</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:75,110,240">
+          <span class="num">03 / 选区</span>
+          <h4>跨端选区内核</h4>
+          <p>以 globalIndex 一维字符索引重写跨页选区：字符索引、命中测试、输入适配与渲染分层；兼容层平滑替换旧插件，下游无感切换。</p>
+          <p class="metric">PC / 移动共用内核 · 旧插件下线</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:94,92,230">
+          <span class="num">04 / 排版</span>
+          <h4>DOC 表格排版引擎</h4>
+          <p>逆向对齐 Word 表格渲染的未公开规则：734 个 XML 字段打标、80+ 篇真实样张、105 种样式；实现样式导入导出还原与表格属性面板全量功能。</p>
+          <p class="metric">样式还原 100% · 像素级对齐</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:0,160,140">
+          <span class="num">05 / AI 业务</span>
+          <h4>AI 原文朗读</h4>
+          <p>针对长文档首音延迟，设计 Worker 内 WebSocket 流式合成、边合成边播放；每批 4 段、播放 50% 预取，断线按待补分片补齐，seek 走文本索引。</p>
+          <p class="metric">首音 = 等首批分片 · 跑通付费转化</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:0,175,110">
+          <span class="num">06 / AI 工程</span>
+          <h4>AI Harness 迁移体系</h4>
+          <p>把 Agent 执行约束成带门禁的流程：迁移 Skill、migration-engine、逐行基线 / 编译 / 等价审计 / 单测标准化，配巡检与视觉回归。</p>
+          <p class="metric">12 个 Feature 直接迁移</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:191,90,242">
+          <span class="num">07 / 知识库</span>
+          <h4>三层 LLM Wiki</h4>
+          <p>raw / compiled / runtime 三层知识库，用版本、来源、代码关联与时效检查治理知识生命周期，让经验可被 Agent 按需消费。</p>
+          <p class="metric">129 篇知识 · 个人新增 10 篇</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:220,90,120">
+          <span class="num">08 / 性能</span>
+          <h4>性能与稳定性治理</h4>
+          <p>性能探针扫出 3 个 ERROR、25 个 WARN 并推动修复；审查 AI 播客核心链路，在 8 个核心文件处理 14 类稳定性与资源泄漏问题。</p>
+          <p class="metric">3 ERROR / 25 WARN 收口</p>
+        </article>
+
+        <article class="proj reveal" style="--tint:150,150,160">
+          <span class="num">09 / 迁移</span>
+          <h4>文件合并 / 拆分 / 提取</h4>
+          <p>VIP 能力的 3.0 迁移与失败链路治理，覆盖任务成功率、支付拦截与降级路径，属于 12 个直接迁移的 Feature 之一。</p>
+          <p class="metric">VIP 能力 · 全链路迁移</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PERSONAL ================= -->
+  <section class="sec" id="personal">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">个人项目</p>
+        <h2>两个开源项目，都在 GitHub</h2>
+        <p class="sec-note">点击卡片跳转到对应仓库</p>
+      </div>
+
+      <div class="plist">
+        <a class="pitem reveal" href="https://github.com/weitanai/auto-work" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>auto-work<span class="arrow">↗</span></h3>
+            <p class="repo">github.com/weitanai/auto-work</p>
+            <p class="stack">Raycast API · React · TypeScript · OpenAI</p>
+          </div>
+          <div class="pbody">
+            <p>
+              基于 Raycast 的 AI 文本工作流扩展：选中或复制任意文本后，一键完成改写、摘要与问答，
+              结果直接写回剪贴板，省掉在应用之间反复切换的成本。
+            </p>
+            <p>
+              三个动作共用同一套入口与模式切换，只需配置自己的 OpenAI API Key 即可运行。
+            </p>
+            <p class="metric">改写 / 摘要 / 问答 · MIT</p>
+          </div>
+        </a>
+
+        <a class="pitem reveal" href="https://github.com/weitanai/devloop-agent-pack" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>devloop-agent-pack<span class="arrow">↗</span></h3>
+            <p class="repo">github.com/weitanai/devloop-agent-pack</p>
+            <p class="stack">OpenClaw · Skills · Cron · 飞书 API</p>
+          </div>
+          <div class="pbody">
+            <p>
+              开箱即用的多 Agent 开发闭环：Cron 每日触发选题，飞书确认方向后生成 PRD，
+              再按 S / M / L / XL 分级调度 Dev 并行编码；Test 审查不通过就回流修复，
+              Core Dev 复核后才合并主干。
+            </p>
+            <p>
+              七个角色分工明确（product / core-dev / dev / test / marketing / hook / research），
+              知识按项目留痕到 decisions、discussions 与设计索引，升级时保留自定义人格。
+            </p>
+            <p class="metric">7 个 Agent · 选题到上线闭环</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">工作履历</p>
+        <h2>八年，三段经历</h2>
+      </div>
+
+      <div class="rlist">
+        <article class="rrow reveal">
+          <span class="period">至今</span>
+          <span class="role"><b>腾讯 · 腾讯文档</b><span>批注与 AI 负责人</span></span>
+          <span class="note">2 亿 MAU 的 PDF 项目</span>
+        </article>
+        <article class="rrow reveal">
+          <span class="period">2021.05 – 2022.08</span>
+          <span class="role"><b>富途证券</b><span>前端工程师 · 企业平台组</span></span>
+          <span class="note">设计中台与公共组件库</span>
+        </article>
+        <article class="rrow reveal">
+          <span class="period">2018.09 – 2021.04</span>
+          <span class="role"><b>深投环保 · 信安达</b><span>前端工程师 · 信息中心</span></span>
+          <span class="note">气体检测数据大盘</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span class="name">叶广生 · 前端工程师</span>
+    <span>谢谢你看到这里</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var nodes = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      nodes.forEach(function (n) { n.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        el.classList.add('in');
+        el.addEventListener('transitionend', function () {
+          el.style.transitionDelay = '0s';
+        }, { once: true });
+        io.unobserve(el);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+
+    nodes.forEach(function (n) { io.observe(n); });
+  })();
+</script>
+</body>
+</html>
