@@ -252,18 +252,6 @@
   .pitem .pbody p + p{margin-top:10px}
   .pitem .metric{margin-top:14px;font-size:12.6px;font-weight:500;color:var(--accent)}
 
-  /* ---------- resume ---------- */
-  .rlist{border-top:1px solid var(--line-soft)}
-  .rrow{
-    display:grid;grid-template-columns:160px 1fr 220px;gap:24px;
-    align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line-soft);
-  }
-  .rrow .period{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
-  .rrow .role{font-size:15px}
-  .rrow .role b{font-weight:600}
-  .rrow .role span{color:var(--ink-3);font-size:13.6px;margin-left:10px}
-  .rrow .note{font-size:13.2px;color:var(--ink-3);text-align:right}
-
   /* ---------- footer ---------- */
   footer{margin-top:110px;border-top:1px solid var(--line-soft);padding:30px 0 64px}
   .foot{
@@ -298,8 +286,6 @@
     .proj-list{grid-template-columns:repeat(2,1fr)}
     .caps{grid-template-columns:1fr;gap:28px}
     .pitem{grid-template-columns:1fr;gap:12px}
-    .rrow{grid-template-columns:130px 1fr;gap:16px}
-    .rrow .note{grid-column:2;text-align:left;margin-top:2px}
   }
   @media (max-width:640px){
     .nav-links{display:none}
@@ -313,9 +299,6 @@
     .perf-label{width:100%;margin:0 0 14px}
     .perf > div:not(.perf-label){padding-right:18px;margin-right:18px}
     .proj-list{grid-template-columns:1fr}
-    .rrow{grid-template-columns:1fr;gap:6px}
-    .rrow .note{grid-column:1}
-    .rrow .role span{display:block;margin-left:0;margin-top:5px}
     .tencent h3 .tag{margin-left:0;margin-top:8px}
     .foot{flex-direction:column;align-items:flex-start;gap:8px}
     footer{margin-top:80px}
@@ -340,7 +323,6 @@
       <a href="#view">观点</a>
       <a href="#work">腾讯项目</a>
       <a href="#personal">个人项目</a>
-      <a href="#experience">工作履历</a>
     </div>
   </div>
 </nav>
@@ -557,34 +539,6 @@
             <p class="metric">7 个 Agent · 选题到上线闭环</p>
           </div>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= EXPERIENCE ================= -->
-  <section class="sec" id="experience">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="eyebrow">工作履历</p>
-        <h2>八年，三段经历</h2>
-      </div>
-
-      <div class="rlist">
-        <article class="rrow reveal">
-          <span class="period">至今</span>
-          <span class="role"><b>腾讯 · 腾讯文档</b><span>批注与 AI 负责人</span></span>
-          <span class="note">2 亿 MAU 的 PDF 项目</span>
-        </article>
-        <article class="rrow reveal">
-          <span class="period">2021.05 – 2022.08</span>
-          <span class="role"><b>富途证券</b><span>前端工程师 · 企业平台组</span></span>
-          <span class="note">设计中台与公共组件库</span>
-        </article>
-        <article class="rrow reveal">
-          <span class="period">2018.09 – 2021.04</span>
-          <span class="role"><b>深投环保 · 信安达</b><span>前端工程师 · 信息中心</span></span>
-          <span class="note">气体检测数据大盘</span>
-        </article>
       </div>
     </div>
   </section>
